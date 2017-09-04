@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/main.css">
+		<title>Home | Cooklet</title>
+	</head>
+	<body>
+        <div class="wrapper">
+            <header>
+                <h1>Cooklet</h1>
+                <h2>Manage your own dishes!</h2>
+            </header>
+            
+            <main>
+                <h2>Home</h2>
+                <button id="addRecipe" type="button" aria-hidden="true" aria-label="Add Recipe">Add Recipe</button>
+                
+                <section id="recipes">
+                    
+                </section>
+                
+                <section id="dialog">
+                    <div id="dialogBox">
+                        <button type="button" id="closeDialog">X</button>
+                        <p>Please fill out the form below!</p>
+                        <form>
+                            <div>
+                                <label>Title: </label>
+                                <input type="text" id="title" name="title">
+                            </div>
+                            
+                            <div>
+                                <label>Description: </label>
+                                <textarea rows="4" id="desc" name="desc"></textarea>
+                            </div>
+                            
+                            <div>
+                                <label>Category: </label>
+                                <select id="type" name="type">
+                                    <option value="appetizers">Appetizers</option>
+                                    <option value="breakfast">Breakfast</option>
+                                    <option value="desserts">Desserts</option>
+                                    <option value="mainCourse">Main Course</option>
+                                    <option value="salads">Salads</option>
+                                    <option value="soups">Soups</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label>Rating: </label>
+                                <select id="rating" name="rating">
+                                    <option value="oneStar">1 Star</option>
+                                    <option value="twoStars">2 Stars</option>
+                                    <option value="threeStars">3 Stars</option>
+                                    <option value="fourStars">4 Stars</option>
+                                    <option value="fiveStars">5 Stars</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label>Image URL: </label>
+                                <input type="url" id="image" name="image">
+                            </div>
+                            
+                            <button type="button" id="add">Add Recipe</button>
+                        </form>
+                    </div>
+                </section>
+                
+            </main>
+            
+            <footer>
+                <p>&copy; Cooklet 2017</p>
+                <p>Developed By: Toby Horn</p>
+            </footer>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="../src/main.js"></script>
+	</body>
+</html>

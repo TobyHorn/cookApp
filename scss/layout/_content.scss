@@ -1,0 +1,181 @@
+main {
+    text-align: center;
+
+    
+    & > h2 {
+        font-size: $h1-size;
+        margin: 1rem 0 3rem 0;
+        text-align: center;
+        color: $secondary-color;
+    }
+    
+    & button {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 0.75rem 1rem 0.75rem 1rem;
+        border-radius: 15px;
+        background-color: $success-color;
+        color: $neutral-color;
+        font-weight: bold;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        &:focus {
+            outline-color: transparent;
+            outline-style: none;
+        }
+    }
+}
+
+#dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+}
+
+#dialogBox {
+    display: none;
+    width: 45rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #777;
+    border: 5px solid #999;
+    border-radius: 10px;
+    z-index: 3;
+    
+    & p {
+        text-align: center;
+        margin: 0.5rem 0 0 5rem;
+        color: $tertiary-color;
+    }
+    
+    & #closeDialog {
+        padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+        border-radius: 25px;
+        float: right;
+        margin: 0.25rem 0.25rem 0 0;
+        background-color: $error-color;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    & form {
+        margin: 2rem 0 0 0;
+        text-align: center;
+        
+        & div {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0 1rem 1rem;
+            
+            & label {
+                width: 10rem;
+                text-align: right;
+            }
+            
+            & input, select, textarea {
+                padding: 0.25rem 0 0.25rem 0.5rem;
+                margin: 0 0 0 1rem;
+                width: 60%;
+                
+                &:focus {
+                    outline-color: $primary-color;
+                }
+            }
+            
+            & textarea {
+                resize: vertical;
+            }
+        }
+        
+        & #add, #editRecipe {
+            margin: 0 0 1rem 0;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            background-color: $success-color;
+            border-radius: 10px;
+            font-weight: bold;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#recipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10rem;
+    
+    & article {
+        padding: 1rem;
+        background-color: #aaa;
+        max-width: 30rem;
+        height: 60rem;
+        margin: 0 1rem 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        color: $dark-font-color;
+        position: relative;
+        
+        & h3 {
+            color: $negative-color;
+            margin: 1rem 0 1rem 0;
+        }
+        
+        & p {
+            text-align: left;
+            
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+                margin: 0 0 1rem 0;
+            }
+            
+            &:nth-of-type(1) {
+                word-break: break-all;
+            }
+        }
+        
+        & div {
+            display: flex;
+            margin: 2rem 0 0 0;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0;
+            right: 0;
+            
+            
+            & button {
+                margin-bottom: 0;
+                padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+                color: $neutral-color;
+            }
+            
+            & .edit {
+                background-color: $info-color;
+            }
+            
+            & .delete {
+                background-color: $error-color;
+            }
+        }
+        
+        & img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+    }
+}

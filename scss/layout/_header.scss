@@ -1,0 +1,45 @@
+header {
+    height: 15rem;
+    position: relative;
+    text-align: center;
+    
+    @include mq(medium) {
+        height: 10rem;
+    }
+    
+    @include mq(small) {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    & h1 {
+        font-family: 'helvetica', sans-serif;
+        padding: 2rem 0 0 0;
+        color: $primary-color;
+        text-shadow: 0 3px 3px rgba(0, 0, 0, 0.75);
+        
+    }
+    
+    & h2 {
+        margin: 2.5rem 0 0 0;
+        color: $tertiary-color;
+        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.75);
+    }
+    
+    &::after {
+        content: " ";
+        white-space: pre;
+        background: url("../images/header.jpg") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.3;
+    }
+}

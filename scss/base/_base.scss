@@ -1,0 +1,83 @@
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #888;
+}
+
+h1 {
+    @include heading ($h1-size);
+    
+    @include mq(medium) {
+        font-size: $h2-size;
+    }
+    
+    @include mq(small) {
+        font-size: $h3-size;
+    }
+}
+
+h2 {
+    @include heading ($h2-size);
+    
+    @include mq(medium) {
+        font-size: $h3-size;
+    }
+    @include mq(small) {
+        font-size: $h4-size;
+    }
+}
+
+h3 {
+    @include heading ($h3-size);
+    
+    @include mq(medium) {
+        font-size: $h4-size;
+    }
+    @include mq(small) {
+        font-size: $h5-size;
+    }
+}
+
+h4 {
+    @include heading ($h4-size);
+    
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    max-width: 1920px;
+    margin: auto auto;
+}
+
+p, input, select, button, img, textarea, span {
+    font-size: $h4-size;
+    
+    @include mq(medium) {
+        font-size: $h5-size;
+    }
+    @include mq(small) {
+        font-size: $h6-size;
+    }
+}
+
+label {
+    font-size: $h3-size;
+    
+    @include mq(medium) {
+        font-size: $h4-size;
+    }
+    @include mq(small) {
+        font-size: $h5-size;
+    }
+}

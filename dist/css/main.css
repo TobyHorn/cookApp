@@ -1,0 +1,336 @@
+/*CSS RESET*/
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/*HTML5 - Older browser support*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/*BODY*/
+body {
+  line-height: 1; }
+
+/*LISTS - Clear bullets*/
+ol, ul {
+  list-style: none; }
+
+/*QUOTES*/
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/*TABLES */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Colors*/
+/*FONTS*/
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  height: 100%;
+  background-color: #888; }
+
+h1 {
+  font-weight: bold;
+  font-size: 3.2rem; }
+  @media (max-width: 1199px) {
+    h1 {
+      font-size: 2.4rem; } }
+  @media (max-width: 599px) {
+    h1 {
+      font-size: 1.9rem; } }
+
+h2 {
+  font-weight: bold;
+  font-size: 2.4rem; }
+  @media (max-width: 1199px) {
+    h2 {
+      font-size: 1.9rem; } }
+  @media (max-width: 599px) {
+    h2 {
+      font-size: 1.6rem; } }
+
+h3 {
+  font-weight: bold;
+  font-size: 1.9rem; }
+  @media (max-width: 1199px) {
+    h3 {
+      font-size: 1.6rem; } }
+  @media (max-width: 599px) {
+    h3 {
+      font-size: 1.4rem; } }
+
+h4 {
+  font-weight: bold;
+  font-size: 1.6rem; }
+  @media (max-width: 1199px) {
+    h4 {
+      font-size: 1.4rem; } }
+  @media (max-width: 599px) {
+    h4 {
+      font-size: 1.3rem; } }
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  max-width: 1920px;
+  margin: auto auto; }
+
+p, input, select, button, img, textarea, span {
+  font-size: 1.6rem; }
+  @media (max-width: 1199px) {
+    p, input, select, button, img, textarea, span {
+      font-size: 1.4rem; } }
+  @media (max-width: 599px) {
+    p, input, select, button, img, textarea, span {
+      font-size: 1.3rem; } }
+
+label {
+  font-size: 1.9rem; }
+  @media (max-width: 1199px) {
+    label {
+      font-size: 1.6rem; } }
+  @media (max-width: 599px) {
+    label {
+      font-size: 1.4rem; } }
+
+header {
+  height: 15rem;
+  position: relative;
+  text-align: center; }
+  @media (max-width: 1199px) {
+    header {
+      height: 10rem; } }
+  @media (max-width: 599px) {
+    header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      height: 5rem;
+      padding: 0 1rem 0 1rem; } }
+  header h1 {
+    font-family: 'helvetica', sans-serif;
+    padding: 2rem 0 0 0;
+    color: #8EA106;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.75); }
+  header h2 {
+    margin: 2.5rem 0 0 0;
+    color: #F0C600;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.75); }
+  header::after {
+    content: " ";
+    white-space: pre;
+    background: url("../images/header.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.3; }
+
+main {
+  text-align: center; }
+  main > h2 {
+    font-size: 3.2rem;
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+    color: #FFAD05; }
+  main button {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-radius: 15px;
+    background-color: #46C250;
+    color: #f1f1f1;
+    font-weight: bold; }
+    main button:hover {
+      cursor: pointer; }
+    main button:focus {
+      outline-color: transparent;
+      outline-style: none; }
+
+#dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 2; }
+
+#dialogBox {
+  display: none;
+  width: 45rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #777;
+  border: 5px solid #999;
+  border-radius: 10px;
+  z-index: 3; }
+  #dialogBox p {
+    text-align: center;
+    margin: 0.5rem 0 0 5rem;
+    color: #F0C600; }
+  #dialogBox #closeDialog {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-radius: 25px;
+    float: right;
+    margin: 0.25rem 0.25rem 0 0;
+    background-color: #EB4D4D; }
+    #dialogBox #closeDialog:hover {
+      cursor: pointer; }
+  #dialogBox form {
+    margin: 2rem 0 0 0;
+    text-align: center; }
+    #dialogBox form div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 1rem 0 1rem 1rem; }
+      #dialogBox form div label {
+        width: 10rem;
+        text-align: right; }
+      #dialogBox form div input, #dialogBox form div select, #dialogBox form div textarea {
+        padding: 0.25rem 0 0.25rem 0.5rem;
+        margin: 0 0 0 1rem;
+        width: 60%; }
+        #dialogBox form div input:focus, #dialogBox form div select:focus, #dialogBox form div textarea:focus {
+          outline-color: #8EA106; }
+      #dialogBox form div textarea {
+        resize: vertical; }
+    #dialogBox form #add, #dialogBox form #editRecipe {
+      margin: 0 0 1rem 0;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      background-color: #46C250;
+      border-radius: 10px;
+      font-weight: bold; }
+      #dialogBox form #add:hover, #dialogBox form #editRecipe:hover {
+        cursor: pointer; }
+
+#recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10rem; }
+  #recipes article {
+    padding: 1rem;
+    background-color: #aaa;
+    max-width: 30rem;
+    height: 60rem;
+    margin: 0 1rem 3rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #444;
+    position: relative; }
+    #recipes article h3 {
+      color: #1f1f1f;
+      margin: 1rem 0 1rem 0; }
+    #recipes article p {
+      text-align: left; }
+      #recipes article p:nth-of-type(1), #recipes article p:nth-of-type(2), #recipes article p:nth-of-type(3) {
+        margin: 0 0 1rem 0; }
+      #recipes article p:nth-of-type(1) {
+        word-break: break-all; }
+    #recipes article div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 2rem 0 0 0;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0; }
+      #recipes article div button {
+        margin-bottom: 0;
+        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+        color: #f1f1f1; }
+      #recipes article div .edit {
+        background-color: #067BC2; }
+      #recipes article div .delete {
+        background-color: #EB4D4D; }
+    #recipes article img {
+      max-height: 300px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+footer {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 7rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  footer p {
+    color: #ccc; }
+    footer p:nth-of-type(1) {
+      margin: 0 0 0 1rem; }
+    footer p:nth-of-type(2) {
+      margin: 0 1rem 0 0; }
